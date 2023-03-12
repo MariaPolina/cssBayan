@@ -178,3 +178,53 @@ footer a {
     }
 
 }
+
+@media (hover: hover) {
+
+    .tab__head span {
+        filter: invert(30%);
+    }
+
+    .tab__head {
+        color: rgb(80, 80, 80);
+        transition: all ease 0.4s;
+    }
+
+    .tab:hover {
+        cursor: pointer;
+    }
+
+    .tab:active {
+        filter: brightness(1.80);
+    }
+
+    .tab:hover .tab_info>.tab__head>span {
+        transform: rotate(180deg);
+        filter: invert(100%);
+    }
+
+    .tab:hover .tab_info>.tab__head {
+        color: white;
+    }
+
+    .tab:hover .tab_info>.image {
+        visibility: visible;
+        width: 100%;
+        height: 100%;
+        border-bottom: 1.25rem solid black;
+    }
+
+    .tabs:hover .tab__head {
+        color: rgb(134, 134, 134);
+    }
+
+    .tabs .tab__head>span {
+        visibility: hidden;
+    }
+
+    .tabs:hover .tab__head>span {
+        filter: invert(50%);
+        visibility: visible;
+    }
+
+}
