@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+
+html, body {
+    width: 100%;
+    font-size: 100%;
+    line-height: 1;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    scroll-behavior: smooth;
+}
+
+html {
+    height: 100%;
+    box-sizing: border-box;
+    background-color: black;
+    color: white;
+    font: normal 400 1rem/120% 'Lato';
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+main {
+    flex: 1 1 auto;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+:focus, :active {
+    outline: none;
+}
+
+a:focus, a:active {
+    outline: none;
+}
+
+a, a:visited {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.container {
+    max-width: 100%;
+    margin: 0 auto;
+    background-color: black;
+    padding: 0 1.25rem;
+}
+
+h1 {
+    text-align: center;
+    padding: 1.25rem 2.5rem;
+    font-weight: 700;
+    font-size: 1.25rem;
+}
+
+.tabs {
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.tab {
+    display: block;
+    border-top: 0.0625rem solid white;
+    transition: all ease 0.3s;
+}
+
+.tab input {
+    -webkit-appearance: none;
+    appearance: none;
+    margin: 0;
+}
+
+.tab input:checked+.tab_info>.tab__head>span {
+    transform: rotate(180deg);
+    filter: invert(100%);
+}
+
+.tab input:checked+.tab_info>.tab__head {
+    color: white;
+}
+
+.tab input:checked+.tab_info>.image {
+    visibility: visible;
+    width: 100%;
+    height: 100%;
+}
+
+.tab__head {
+    margin-bottom: 1.25rem;
+    display: flex;
+    flex-direction: row;
+    gap: 1.25rem;
+    justify-content: space-between;
+    align-items: center;
+    color: rgb(134, 134, 134);
+}
+
+.tab__head span {
+    width: 1.2rem;
+    height: 1.2rem;
+    background: url(img/angle-down-solid.svg) center center no-repeat;
+    background-size: contain;
+    filter: invert(50%);
+    transition: all ease 0.3s;
+}
+
+.image {
+    visibility: hidden;
+    width: 0;
+    height: 0;
+    transition: all ease 0.4s;
+    text-align: center;
+}
+
+.image img {
+    width: 100%;
+    aspect-ratio: 1.5 / 1;
+}
+
+footer p {
+    text-align: center;
+    padding: 1.25rem 0;
+    font-weight: 300;
+}
+
+footer a {
+    display: block;
+    font-weight: 300;
+    padding-bottom: 1.25rem;
+    text-align: center;
+}
+
+@media (min-width: 767px) {
+    .container {
+        max-width: 80%;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .tab__head p, footer a, footer p {
+        font-size: 1.125rem;
+    }
+
+    .image img {
+        width: 80%;
+    }
+
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 50%;
+    }
+
+    h1 {
+        font-size: 1.875rem;
+    }
+
+    .tab__head p, footer a, footer p {
+        font-size: 1.25rem;
+    }
+
+}
+
+@media (hover: hover) {
+
+    .tab__head span {
+        filter: invert(30%);
+    }
+
+    .tab__head {
+        color: rgb(80, 80, 80);
+        transition: all ease 0.4s;
+    }
+
+    .tab:hover {
+        cursor: pointer;
+    }
+
+    .tab:active {
+        filter: brightness(1.80);
+    }
+
+    .tab:hover .tab_info>.tab__head>span {
+        transform: rotate(180deg);
+        filter: invert(100%);
+    }
+
+    .tab:hover .tab_info>.tab__head {
+        color: white;
+    }
+
+    .tab:hover .tab_info>.image {
+        visibility: visible;
+        width: 100%;
+        height: 100%;
+    }
+
+    .tabs:hover .tab__head {
+        color: rgb(134, 134, 134);
+    }
+
+    .tabs .tab__head>span {
+        visibility: hidden;
+    }
+
+    .tabs:hover .tab__head>span {
+        filter: invert(50%);
+        visibility: visible;
+    }
+
+}
