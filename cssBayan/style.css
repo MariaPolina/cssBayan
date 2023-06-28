@@ -96,7 +96,6 @@ h1 {
     visibility: visible;
     width: 100%;
     height: 100%;
-    border-bottom: 1.25rem solid black;
 }
 
 .tab__head {
@@ -124,7 +123,6 @@ h1 {
     height: 0;
     transition: all ease 0.4s;
     text-align: center;
-    border-bottom: 0 solid black;
 }
 
 .image img {
@@ -211,7 +209,6 @@ footer a {
         visibility: visible;
         width: 100%;
         height: 100%;
-        border-bottom: 1.25rem solid black;
     }
 
     .tabs:hover .tab__head {
